@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
-import { HERO_IMAGE1, HERO_IMAGE2, HIKING, ICON1, MAN, TOUR_BG, TOURISM, TRAVEL } from "@/constants/images";
+import { HERO_IMAGE2, HIKING, ICON1, MAN, BG_SLIDE, TOURISM, TRAVEL } from "@/constants/images";
 import { AppButton } from "@/components/Button";
 import { Icon } from "@iconify/react";
 import React from "react";
+import { motion } from "framer-motion";
+
 
 
 const features = [
@@ -35,9 +37,17 @@ const whyChooseUsCards = [
         desc: "Reliable assistance available anytime during your journey.",
     },
 ];
+const BG_WIDTH = 1920; // Width of the background image for seamless scrolling
+
+
+
+
+
+
 const WhyChooseUs = () => {
     return (
-        <section className="offer-banner w-full bg-white sectionPadding md:px-10">
+        <section className=" WhyChooseUsSec w-full bg-white sectionPadding md:px-10 relative" >
+            <div className="bgSlideImage" style={{ backgroundImage: `url(${BG_SLIDE})` }}></div>
             <div className="custom-container relative flex items-center justify-center lg:flex-row flex-col md:gap-[4.8rem] gap-[3rem]">
                 <div className="lg:w-1/2 w-full lg:mt-[0] mt-[30px] flex flex-col items-start justify-center h-full gap-8">
                     <span className="text-primary text-[1.8rem] font-semibold uppercase">
@@ -97,7 +107,7 @@ const WhyChooseUs = () => {
                                         className="w-[5rem] h-[5rem] object-contain"
                                         priority
                                     />
-                                    <span className="text-[2.4rem] NewFont2 text-heading-color font-medium ">
+                                    <span className="text-[2.4rem] NewFont2 text-heading-color font-semibold">
                                         {card.title}
                                     </span>
                                 </div>

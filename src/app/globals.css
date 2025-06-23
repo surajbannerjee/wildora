@@ -303,3 +303,36 @@ img.hamburger_icon {
     width: 100% !important;
   } */
 }
+@-webkit-keyframes translateBg {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-2250px, 0, 0);
+    transform: translate3d(-2250px, 0, 0);
+  }
+}
+@keyframes translateBg {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-2250px, 0, 0);
+    transform: translate3d(-2250px, 0, 0);
+  }
+}
+.bgSlideImage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 5000%;
+  height: 60%;
+  background-position: top;
+  opacity: 0.05;
+  background-repeat: repeat-x;
+  background-size: contain;
+  -webkit-animation: translateBg 70s linear infinite;
+  animation: translateBg 70s linear infinite;
+}

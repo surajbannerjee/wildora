@@ -2,6 +2,7 @@ import AboutUs from '@/components/HomeComponents/AboutUs/AboutUs';
 import AnimalsSlider from '@/components/HomeComponents/AnimalsSlider/AnimalsSlider';
 import Call_To_Action from '@/components/HomeComponents/Call_To_Action/Call_To_Action';
 import HeroSec from '@/components/HomeComponents/HeroSec/HeroSec';
+import LetestNews from '@/components/HomeComponents/LetestNews/LetestNews';
 import PopularPackages from '@/components/HomeComponents/PopularPackages/PopularPackages';
 import SafariSec from '@/components/HomeComponents/SafariSec/SafariSec';
 import WhyChooseUs from '@/components/HomeComponents/WhyChooseUs/WhyChooseUs';
@@ -18,6 +19,7 @@ export default function HomePage() {
         <PopularPackages />
         <SafariSec />
         <WhyChooseUs />
+        <LetestNews />
       </div>
     </>
   );

@@ -43,3 +43,4 @@ export const TRAVEL = URL("/assets/images/travel.png");
 export const TOURISM = URL("/assets/images/tourism.png");
 export const MAN = URL("/assets/images/man.png");
 export const HIKING = URL("/assets/images/hiking.png");
+export const BG_SLIDE = URL("/assets/images/BgSlide.png");
