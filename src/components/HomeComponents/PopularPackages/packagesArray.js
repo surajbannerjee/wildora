@@ -27,7 +27,7 @@ const packages = [
         linkText: "Book Now",
         location: "Kruger National Park, South Africa",
         rating: 4.9,
-        offprice: "800",
+        offprice: "10% off",
         reviews: 410,
         price: "620",
         duration: "6 Days – 5 Nights",
@@ -72,6 +72,7 @@ const packages = [
         location: "Yala, Sri Lanka",
         rating: 4.8,
         reviews: 210,
+        offprice: "10% off",
         price: "420",
         duration: "4 Days – 3 Nights",
         feature: "Photographer’s Choice"
@@ -100,6 +101,7 @@ const packages = [
         location: "Masai Mara, Kenya",
         rating: 4.9,
         reviews: 450,
+        offprice: "20% off",
         price: "650",
         duration: "5 Days – 4 Nights",
         feature: "Popular"
@@ -142,6 +144,7 @@ const packages = [
         location: "Western Ghats, India",
         rating: 4.7,
         reviews: 230,
+        offprice: "10% off",
         price: "450",
         duration: "4 Days – 3 Nights",
         feature: "Eco Adventure"
@@ -156,6 +159,7 @@ const packages = [
         location: "Gir National Park, India",
         rating: 4.4,
         reviews: 165,
+        offprice: "5% off",
         price: "320",
         duration: "2 Days – 1 Night",
         feature: "Night Ride"
@@ -171,6 +175,7 @@ const packages = [
         rating: 4.9,
         reviews: 270,
         price: "700",
+        offprice: "15% off",
         duration: "5 Days – 4 Nights",
         feature: "Speed Chase"
     },
@@ -185,6 +190,7 @@ const packages = [
         rating: 4.5,
         reviews: 142,
         price: "340",
+        offprice: "10% off",
         duration: "3 Days – 2 Nights",
         feature: "Birdwatcher Pick"
     },
@@ -211,6 +217,7 @@ const packages = [
         linkText: "Book Now",
         location: "Hemis National Park, India",
         rating: 4.8,
+        offprice: "20% off",
         reviews: 195,
         price: "750",
         duration: "6 Days – 5 Nights",
@@ -226,6 +233,7 @@ const packages = [
         location: "Periyar Wildlife Sanctuary, India",
         rating: 4.5,
         reviews: 180,
+        offprice: "10% off",
         price: "370",
         duration: "3 Days – 2 Nights",
         feature: "Scenic Ride"
@@ -240,6 +248,7 @@ const packages = [
         location: "Keoladeo Ghana, India",
         rating: 4.6,
         reviews: 210,
+        offprice: "5% off",
         price: "400",
         duration: "3 Days – 2 Nights",
         feature: "Bird Sanctuary"
