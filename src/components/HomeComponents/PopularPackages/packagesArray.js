@@ -231,7 +231,7 @@ const packages = [
         reviews: 180,
         price: "370",
         duration: "3 Days – 2 Nights",
-        feature: "Scenic Ride" , 
+        feature: "Scenic Ride",
         offprice: "12% off"
     },
     {
