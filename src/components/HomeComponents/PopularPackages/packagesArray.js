@@ -16,6 +16,7 @@ import {
     HERO_IMAGE15,
     HERO_IMAGE16,
 } from "@/constants/images";
+import { o } from "framer-motion/dist/types.d-B_QPEvFK";
 
 const packages = [
     {
@@ -30,7 +31,8 @@ const packages = [
         reviews: 410,
         price: "620",
         duration: "6 Days – 5 Nights",
-        feature: "Big Five"
+        feature: "Big Five",
+        offprice: "20% off"
     },
     {
         id: 2,
@@ -86,7 +88,8 @@ const packages = [
         reviews: 193,
         price: "400",
         duration: "3 Days – 2 Nights",
-        feature: "UNESCO Reserve"
+        feature: "UNESCO Reserve",
+        offprice: "15% off"
     },
     {
         id: 6,
@@ -128,7 +131,8 @@ const packages = [
         reviews: 120,
         price: "310",
         duration: "2 Days – 1 Night",
-        feature: "Offbeat"
+        feature: "Offbeat",
+        offprice: "10% off"
     },
     {
         id: 9,
@@ -142,7 +146,8 @@ const packages = [
         reviews: 230,
         price: "450",
         duration: "4 Days – 3 Nights",
-        feature: "Eco Adventure"
+        feature: "Eco Adventure",
+        offprice: "15% off"
     },
     {
         id: 10,
@@ -226,7 +231,8 @@ const packages = [
         reviews: 180,
         price: "370",
         duration: "3 Days – 2 Nights",
-        feature: "Scenic Ride"
+        feature: "Scenic Ride" , 
+        offprice: "12% off"
     },
     {
         id: 16,
@@ -240,7 +246,8 @@ const packages = [
         reviews: 210,
         price: "400",
         duration: "3 Days – 2 Nights",
-        feature: "Bird Sanctuary"
+        feature: "Bird Sanctuary",
+        offprice: "15% off"
     }
 ];
 
