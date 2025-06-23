@@ -1,12 +1,12 @@
 "use client";
 import TextSlider from "@/components/TextSlider/TextSlider";
-import { BG2, RECTANGLE } from "@/constants/images";
+import { HERO_IMAGE8, RECTANGLE } from "@/constants/images";
 import Image from "next/image";
 
 
 const Call_To_Action = () => {
     return (
-        <section className="WhyChoose w-full relative sectionPadding xl:pt-[15rem] xl:pb-[25rem]  overflow-hidden bg-cover bg-center bg-no-repeat bg-dark  flex items-center justify-center" style={{ backgroundImage: `url(${BG2})` }}>
+        <section className="WhyChoose w-full relative sectionPadding xl:pt-[15rem] xl:pb-[25rem]  overflow-hidden bg-cover bg-center bg-no-repeat bg-dark  flex items-center justify-center" style={{ backgroundImage: `url(${HERO_IMAGE8})` }}>
             <div className="custom-container relative flex flex-col md:flex-row items-center justify-end md:gap-[6rem] gap-[3rem]">
                 {/* marque text here */}
                 <div className="absolute 2xl:left-0 xl:left-[3rem] left-[50%] xl:-translate-x-[0%] -translate-x-[50%] xl:top-[65%] md:top-[25%] sm:top-[20%] top-[16%] -translate-y-[-50%] overflow-hidden whitespace-nowrap w-full 2xl:max-w-[40%] lg:max-w-[45%] md:max-w-[60%] max-w-[80%] z-[3]">
