@@ -28,7 +28,8 @@ const AboutUs = () => {
                     <div className="rounded-[3.2rem] overflow-hidden shadow-lg w-full md:min-h-[50rem] bg-black">
                         <video
                             src="https://cdn.pixabay.com/video/2023/01/04/145320-786403437_large.mp4" // <-- replace with your video path
-                            controls
+                            type="video/mp4"
+                            playsInline
                             autoPlay
                             loop
                             muted
