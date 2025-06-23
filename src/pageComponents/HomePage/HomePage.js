@@ -17,6 +17,7 @@ export default function HomePage() {
         <Call_To_Action />
         <PopularPackages />
         <SafariSec />
+        <WhyChooseUs />
       </div>
     </>
   );

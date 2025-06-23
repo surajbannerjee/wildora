@@ -20,7 +20,7 @@ const secondColumn = features.slice(3);
 
 const SafariSec = () => {
     return (
-        <section className="offer-banner w-full bg-dark py-16 px-4 md:px-10 min-h-[100vh] flex md:flex-row flex-col items-center justify-center relative overflow-hidden">
+        <section className="offer-banner w-full bg-dark sectionPadding min-h-[100vh] flex md:flex-row flex-col items-center justify-center relative overflow-hidden">
             <video
                 className="absolute top-0 left-0 w-full h-full object-cover z-[1]"
                 autoPlay
@@ -44,6 +44,9 @@ const SafariSec = () => {
                 </div>
 
                 <div className="relative z-[2] lg:w-1/2 lg:mt-[0] mt-[30px] md:pl-[6rem] flex flex-col items-start justify-center h-full gap-8">
+                    <span className="text-primary text-[1.8rem] font-semibold uppercase">
+                        Safari Tours
+                    </span>
                     <h2 className="text-white uppercase"> Discover the Majesty of the Wild <span className="text-secondary">– Asiatic Lions Safari Tours</span></h2>
                     <p className="text-[2rem] text-white">
                         Experience the thrill of a lifetime with our exclusive Asiatic Lions Safari Tours.

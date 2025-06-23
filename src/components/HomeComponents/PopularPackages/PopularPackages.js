@@ -59,6 +59,9 @@ const PopularPackages = () => {
             </motion.div>
             <div className="custom-container relative flex flex-col items-center justify-center md:gap-[4.8rem] gap-[1.5rem]">
                 <div className="Heading text-center flex flex-col items-center justify-center gap-[1.6rem]">
+                    <span className="text-primary text-[1.8rem] font-semibold uppercase">
+                        Popular Packages
+                    </span>
                     <h2 className="text-white uppercase">
                         POPULAR WILDLIFE<span className="text-secondary"> TOUR PACKAGES</span>
                     </h2>
