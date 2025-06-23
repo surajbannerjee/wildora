@@ -16,7 +16,6 @@ import {
     HERO_IMAGE15,
     HERO_IMAGE16,
 } from "@/constants/images";
-import { o } from "framer-motion/dist/types.d-B_QPEvFK";
 
 const packages = [
     {
@@ -28,11 +27,11 @@ const packages = [
         linkText: "Book Now",
         location: "Kruger National Park, South Africa",
         rating: 4.9,
+        offprice: "800",
         reviews: 410,
         price: "620",
         duration: "6 Days – 5 Nights",
-        feature: "Big Five",
-        offprice: "20% off"
+        feature: "Big Five"
     },
     {
         id: 2,
@@ -44,6 +43,7 @@ const packages = [
         location: "Bandhavgarh, India",
         rating: 4.7,
         reviews: 285,
+        offprice: "15% off",
         price: "480",
         duration: "4 Days – 3 Nights",
         feature: "Tiger Territory"
@@ -88,8 +88,7 @@ const packages = [
         reviews: 193,
         price: "400",
         duration: "3 Days – 2 Nights",
-        feature: "UNESCO Reserve",
-        offprice: "15% off"
+        feature: "UNESCO Reserve"
     },
     {
         id: 6,
@@ -131,8 +130,7 @@ const packages = [
         reviews: 120,
         price: "310",
         duration: "2 Days – 1 Night",
-        feature: "Offbeat",
-        offprice: "10% off"
+        feature: "Offbeat"
     },
     {
         id: 9,
@@ -146,8 +144,7 @@ const packages = [
         reviews: 230,
         price: "450",
         duration: "4 Days – 3 Nights",
-        feature: "Eco Adventure",
-        offprice: "15% off"
+        feature: "Eco Adventure"
     },
     {
         id: 10,
@@ -231,8 +228,7 @@ const packages = [
         reviews: 180,
         price: "370",
         duration: "3 Days – 2 Nights",
-        feature: "Scenic Ride",
-        offprice: "12% off"
+        feature: "Scenic Ride"
     },
     {
         id: 16,
@@ -246,8 +242,7 @@ const packages = [
         reviews: 210,
         price: "400",
         duration: "3 Days – 2 Nights",
-        feature: "Bird Sanctuary",
-        offprice: "15% off"
+        feature: "Bird Sanctuary"
     }
 ];
 
