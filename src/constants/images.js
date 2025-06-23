@@ -34,3 +34,7 @@ export const SIDE3 = URL("/assets/images/sideimg3.png");
 
 export const RECTANGLE = URL("/assets/images/Rectangle.png");
 export const TOUR_BG = URL("/assets/images/tour-bg.png");
+export const GUIDE = URL("/assets/images/guide.svg");
+export const PLANNING = URL("/assets/images/planning.svg");
+export const LION = URL("/assets/images/lion.jpg");
+export const LION1 = URL("/assets/images/lion1.png");

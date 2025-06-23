@@ -5,8 +5,8 @@ import { Icon } from "@iconify/react";
 const PackageCard = ({ title, desc, image, link, linkText, location, rating, reviews, price, offprice, duration, feature }) => {
 
     return (
-        <div className="package-card w-full bg-white shadow-lg xl:rounded-[3.2rem] md:rounded-[2.4rem] rounded-[2rem] p-[0.5rem]">
-            <div className="relative w-full xl:h-[30rem] h-[20rem] md:mb-[2rem] mb-[1rem] overflow-hidden xl:rounded-[3.2rem] md:rounded-[2.4rem] rounded-[2rem] ">
+        <div className="package-card w-full bg-white shadow-lg xl:rounded-[3.2rem] md:rounded-[2.4rem] rounded-[2rem] p-[0.5rem] overflow-hidden">
+            <div className="relative w-full xl:h-[30rem] h-[20rem] md:mb-[2rem] mb-[1rem] overflow-hidden xl:rounded-[3.2rem] md:rounded-[2.4rem] rounded-[2rem]">
                 {feature && (
                     <Link href={link} className="absolute top-[2rem] left-[2rem] bg-secondary text-white px-[1.5rem] py-[1rem] leading-[1] rounded-full md:text-[1.6rem] text-[1.4rem] font-semibold z-[2]">
                         {feature}

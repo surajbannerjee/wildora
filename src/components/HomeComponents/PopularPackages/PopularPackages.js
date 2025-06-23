@@ -117,6 +117,7 @@ const PopularPackages = () => {
                     </Swiper>
                 </div>
             </div>
+
         </section>
     );
 };

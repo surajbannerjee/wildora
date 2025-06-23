@@ -3,6 +3,7 @@ import AnimalsSlider from '@/components/HomeComponents/AnimalsSlider/AnimalsSlid
 import Call_To_Action from '@/components/HomeComponents/Call_To_Action/Call_To_Action';
 import HeroSec from '@/components/HomeComponents/HeroSec/HeroSec';
 import PopularPackages from '@/components/HomeComponents/PopularPackages/PopularPackages';
+import SafariSec from '@/components/HomeComponents/SafariSec/SafariSec';
 import WhyChooseUs from '@/components/HomeComponents/WhyChooseUs/WhyChooseUs';
 import React from 'react';
 export default function HomePage() {
@@ -15,7 +16,7 @@ export default function HomePage() {
         <AboutUs />
         <Call_To_Action />
         <PopularPackages />
-        <WhyChooseUs />
+        <SafariSec />
       </div>
     </>
   );
