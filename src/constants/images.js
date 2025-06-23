@@ -1,0 +1,38 @@
+const URL = (url) => {
+  return url;
+};
+export const LOGO = URL("/assets/images/logo.png");
+export const HAMBURGER = URL("/assets/images/Hamburger.svg");
+export const HERO_IMAGE1 = URL("/assets/images/Bg1.webp");
+export const HERO_IMAGE2 = URL("/assets/images/Bg2.webp");
+export const HERO_IMAGE3 = URL("/assets/images/Bg3.webp");
+export const HERO_IMAGE4 = URL("/assets/images/Bg4.webp");
+export const HERO_IMAGE5 = URL("/assets/images/Bg5.webp");
+export const HERO_IMAGE6 = URL("/assets/images/Bg6.webp");
+export const HERO_IMAGE7 = URL("/assets/images/Bg7.webp");
+export const HERO_IMAGE8 = URL("/assets/images/Bg8.webp");
+export const HERO_IMAGE9 = URL("/assets/images/Bg9.webp");
+export const HERO_IMAGE10 = URL("/assets/images/Bg10.webp");
+export const HERO_IMAGE11 = URL("/assets/images/Bg11.webp");
+export const HERO_IMAGE12 = URL("/assets/images/Bg12.webp");
+export const HERO_IMAGE13 = URL("/assets/images/Bg13.webp");
+export const HERO_IMAGE14 = URL("/assets/images/Bg14.webp");
+export const HERO_IMAGE15 = URL("/assets/images/Bg15.webp");
+export const HERO_IMAGE16 = URL("/assets/images/Bg16.webp");
+export const BG1 = URL("/assets/images/bg7.webp");
+export const BG2 = URL("/assets/images/bg8.webp");
+export const ANIMAL1 = URL("/assets/images/animal-1.png");
+export const ANIMAL2 = URL("/assets/images/animal-2.png");
+export const ANIMAL3 = URL("/assets/images/animal-3.png");
+export const ANIMAL4 = URL("/assets/images/animal-4.png");
+export const ANIMAL5 = URL("/assets/images/animal-5.png");
+export const ANIMAL6 = URL("/assets/images/animal-6.png");
+export const ANIMAL7 = URL("/assets/images/animal-7.png");
+export const ANIMAL8 = URL("/assets/images/animal-8.png");
+export const SAFARI = URL("/assets/images/safari.webp");
+export const SIDE1 = URL("/assets/images/snake.png");
+export const SIDE2 = URL("/assets/images/sideimg2.png");
+export const SIDE3 = URL("/assets/images/sideimg3.png");
+
+export const RECTANGLE = URL("/assets/images/Rectangle.png");
+export const TOUR_BG = URL("/assets/images/tour-bg.png");
