@@ -44,18 +44,18 @@ const SafariSec = () => {
                 </div>
 
                 <div className="relative z-[2] lg:w-1/2 lg:mt-[0] mt-[30px] md:pl-[6rem] flex flex-col items-start justify-center h-full gap-8">
-                    <span className="text-primary text-[1.8rem] font-semibold uppercase">
+                    <span className="text-primary ButtonFont text-[4rem] leading-[1] font-medium tracking-wide">
                         Safari Tours
                     </span>
-                    <h2 className="text-white uppercase"> Discover the Majesty of the Wild <span className="text-secondary">– Asiatic Lions Safari Tours</span></h2>
-                    <p className="text-[2rem] text-white">
+                    <h2 className="text-white font-semibold"> Discover the Majesty of the Wild <span className="text-secondary">– Asiatic Lions Safari Tours</span></h2>
+                    <p className="text-[1.6rem] text-white leading-[1.5]">
                         Experience the thrill of a lifetime with our exclusive Asiatic Lions Safari Tours.
                         Explore the wild like never before, guided by experts who know the terrain and the majestic creatures that inhabit it.
                     </p>
-                    <div className="flex flex-wrap gap-4 w-full">
+                    <div className="flex flex-wrap gap-[4rem] w-full">
                         <ul className="flex flex-col gap-4">
                             {firstColumn.map((feature, idx) => (
-                                <li className="flex items-center  flex-row text-[1.8rem] justify-start gap-5 font-semibold text-white" key={idx}>
+                                <li className="flex items-center flex-row text-[1.6rem] justify-start gap-5 font-medium text-white" key={idx}>
                                     <span>
                                         <Icon icon="garden:check-badge-fill-12" />
                                     </span>
@@ -65,7 +65,7 @@ const SafariSec = () => {
                         </ul>
                         <ul className="flex flex-col gap-4">
                             {secondColumn.map((feature, idx) => (
-                                <li className="flex items-center flex-row text-[1.8rem] justify-start gap-5 font-semibold text-white" key={idx}>
+                                <li className="flex items-center flex-row text-[1.6rem] justify-start gap-5 font-medium text-white" key={idx}>
                                     <span>
                                         <Icon icon="garden:check-badge-fill-12" />
                                     </span>

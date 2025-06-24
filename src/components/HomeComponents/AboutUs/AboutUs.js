@@ -40,11 +40,11 @@ const AboutUs = () => {
                 </div>
                 {/* Text Content */}
                 <div className="w-full md:w-1/2 flex flex-col gap-[2rem] items-start">
-                    <span className="text-primary text-[1.8rem] font-semibold uppercase">
+                    <span className="text-primary ButtonFont text-[4rem] leading-[1] font-medium tracking-wide">
                         About Us
                     </span>
-                    <h2 className="font-medium text-white uppercase tracking-wide">Welcome to <span className="text-secondary">Wildora</span></h2>
-                    <p className="text-[2rem] text-gray-50">
+                    <h2 className="font-semibold text-white">Welcome to <span className="text-secondary">Wildora</span></h2>
+                    <p className="text-[1.6rem] text-gray-50 leading-[1.5] mb-[2rem]">
                         At Wildora, we curate unforgettable journeys that connect you with the heart of nature. Whether you're seeking luxury retreats, wildlife encounters, or cultural discoveries, our expert team is here to craft seamless, meaningful adventures designed around your passions. Your next great story begins here.
                     </p>
                     <AppButton href="#">Learn More</AppButton>

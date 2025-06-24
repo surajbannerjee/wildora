@@ -10,14 +10,18 @@
   transition: all 0.3s linear;
   /* WebKit  */
 }
-
+:root {
+  --heading-font: "Manrope", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --accent-font: "Just Another Hand", cursive;
+}
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-size: 62.5%;
-  font-family: "Lato", sans-serif;
+  font-family: var(--body-font);
 }
 
 /* :root {
@@ -86,8 +90,8 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1.6rem;
+  line-height: 1.5;
   scroll-behavior: smooth;
 }
 
@@ -118,34 +122,29 @@ input.form-control:focus {
   .sectionPadding {
     @apply py-[3rem] md:py-[4rem] lg:py-[6rem] 2xl:py-[8rem];
   }
-  .NewFont {
-    font-family: "Yeseva One", serif;
+  .ButtonFont {
+    font-family: var(--accent-font);
   }
-  .NewFont2 {
-    font-family: "Barlow Semi Condensed", sans-serif;
-  }
-  .NewFont3 {
-    font-family: "Lato", sans-serif;
-  }
+ 
 }
 
 h1 {
-  font-size: 10rem;
+  font-size: 8rem;
   line-height: 1;
 }
 @media (max-width: 1600px) {
   h1 {
-    font-size: 8.5rem;
+    font-size: 7.5rem;
   }
 }
 @media (max-width: 1440px) {
   h1 {
-    font-size: 8rem;
+    font-size: 7rem;
   }
 }
 @media (max-width: 1280px) {
   h1 {
-    font-size: 7.2rem;
+    font-size: 6.6rem;
   }
 }
 @media (max-width: 1024px) {
@@ -196,7 +195,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Yeseva One", serif;
+  font-family: var(--heading-font);
 }
 .custom-gradient {
   background: linear-gradient(
@@ -335,4 +334,19 @@ img.hamburger_icon {
   background-size: contain;
   -webkit-animation: translateBg 70s linear infinite;
   animation: translateBg 70s linear infinite;
+}
+
+.blink-on-hover:hover {
+  animation: ZoomInOut 1s infinite;
+}
+@keyframes ZoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

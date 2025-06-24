@@ -18,6 +18,7 @@ const navItems = [
 const Header = () => {
     const [showShadow, setShowShadow] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [isWhiteBg, setIsWhiteBg] = useState(false);
 
     // Only shadow on scroll
     useEffect(() => {
@@ -25,9 +26,31 @@ const Header = () => {
             setShowShadow(window.scrollY > 10);
         };
         window.addEventListener("scroll", handleScroll, { passive: true });
-        handleScroll(); // initialize on mount
+        handleScroll();
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    // Detect if any white-bg-section is in view
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('.white-bg-section');
+            let found = false;
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 80 && rect.bottom >= 80) {
+                    found = true;
+                }
+            });
+            setIsWhiteBg(found);
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        handleScroll();
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const navTextColor = isWhiteBg
+        ? "text-heading-color hover:text-secondary"
+        : "text-white hover:text-secondary";
 
     return (
         <>
@@ -52,19 +75,18 @@ const Header = () => {
                             />
                         </Link>
                         {/* Desktop Navigation */}
-
+                        <nav className="items-center md:gap-[1.6rem] hidden lg:flex">
+                            {navItems.map((item, index) => (
+                                <a
+                                    key={index}
+                                    href={item.href}
+                                    className={`group relative text-[1.8rem] leading-1 font-medium py-[10px] transition-all duration-300 ${navTextColor}`}
+                                >
+                                    <span className="pl-[15px]">{item.label}</span>
+                                </a>
+                            ))}
+                        </nav>
                     </div>
-                    <nav className="items-center md:gap-[1.6rem] hidden lg:flex">
-                        {navItems.map((item, index) => (
-                            <a
-                                key={index}
-                                href={item.href}
-                                className="group relative text-[1.8rem] leading-1 font-medium py-[10px] transition-all duration-300 text-white hover:text-secondary"
-                            >
-                                <span className="pl-[15px]">{item.label}</span>
-                            </a>
-                        ))}
-                    </nav>
                     {/* Contact Button (Desktop) */}
                     <div className="hidden lg:flex">
                         <AppButton href="/#contact">Book Now</AppButton>

@@ -15,14 +15,14 @@ const Call_To_Action = () => {
 
                 {/* Text Content */}
                 <div className="w-full xl:w-[70%] flex flex-col xl:gap-[0rem] md:gap-[5rem] gap-[4rem] xl:items-start items-center xl:justify-start justify-center relative z-[2]">
-                    <span className="2xl:text-[8rem] xl:text-[7.5rem] md:text-[5rem] text-[3rem] leading-[1] font-medium NewFont2 text-white flex items-end xl:justify-start justify-center gap-[1.5rem]">Wild <span className="text-secondary uppercase 2xl:text-[15rem] xl:text-[10rem] md:text-[7rem] text-[5rem] leading-[1] font-bold">life</span> With</span>
-                    <span className="2xl:text-[8rem] xl:text-[7.5rem] md:text-[5rem] text-[3rem] leading-[1] font-medium NewFont2 text-white flex items-end gap-[1.5rem] xl:pl-[15rem] relative"><span className="text-secondary uppercase 2xl:text-[15rem] xl:text-[10rem] md:text-[7rem] text-[5rem] leading-[1] font-bold">Wild-dale</span>
+                    <span className="2xl:text-[7rem] xl:text-[6.5rem] md:text-[6rem] text-[4rem] leading-[1.5] font-medium NewFont2 text-white flex items-end xl:justify-start justify-center gap-[1.5rem]">Wild <span className="text-secondary uppercase 2xl:text-[8.5rem] xl:text-[8rem] md:text-[6.5rem] text-[5rem] leading-[1.5] font-bold">life</span> With</span>
+                    <span className="2xl:text-[7rem] xl:text-[6.5rem] md:text-[6rem] text-[4rem] leading-[1.5] font-medium NewFont2 text-white flex items-end gap-[1.5rem] xl:pl-[15rem] relative"><span className="text-secondary uppercase 2xl:text-[8.5rem] xl:text-[8rem] md:text-[6.5rem] text-[5rem] leading-[1.5] font-bold">Wild-dale</span>
                         <Image
                             height={500}
                             width={500}
                             src={RECTANGLE}
                             alt="Wildlife Image"
-                            className="absolute right-[-10rem] 2xl:top-[-8rem] xl:top-[-5rem] lg:top-[-4rem] 2xl:w-[20rem] xl:w-[13rem] lg:w-[10rem] xl:block hidden h-auto object-cover"
+                            className="absolute right-[-10rem] 2xl:top-[-8rem] xl:top-[-5rem] lg:top-[-4rem] 2xl:w-[16rem] xl:w-[13rem] lg:w-[10rem] xl:block hidden h-auto object-cover"
                             priority
                         />
                     </span>

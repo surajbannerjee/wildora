@@ -95,7 +95,7 @@ const HeroSec = () => {
                         </div>
                         <div className="custom-container relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
                             <div className="w-full flex flex-col items-center gap-[30px] md:max-w-[80%] 2xl:max-w-[100%]">
-                                <h1 className="font-medium">{slide.heading}</h1>
+                                <h1 className="font-semibold">{slide.heading}</h1>
                                 <p className="text-[20px]">{slide.description}</p>
                                 <AppButton href={slide.button.href}>{slide.button.text}</AppButton>
                             </div>

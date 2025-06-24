@@ -46,20 +46,20 @@ const BG_WIDTH = 1920; // Width of the background image for seamless scrolling
 
 const WhyChooseUs = () => {
     return (
-        <section className=" WhyChooseUsSec w-full bg-white sectionPadding md:px-10 relative" >
+        <section className=" WhyChooseUsSec w-full white-bg-section bg-white sectionPadding md:px-10 relative" >
             <div className="bgSlideImage" style={{ backgroundImage: `url(${BG_SLIDE})` }}></div>
             <div className="custom-container relative flex items-center justify-center lg:flex-row flex-col md:gap-[4.8rem] gap-[3rem]">
                 <div className="lg:w-1/2 w-full lg:mt-[0] mt-[30px] flex flex-col items-start justify-center h-full gap-8">
-                    <span className="text-primary text-[1.8rem] font-semibold uppercase">
+                    <span className="text-primary ButtonFont text-[4rem] leading-[1] font-medium tracking-wide">
                         why choose us?
                     </span>
-                    <h2 className="text-heading-color uppercase"> We Make <span className="text-secondary">Every Journey Seamless & Inspiring</span></h2>
-                    <p className="text-[2rem] text-heading-color">
+                    <h2 className="text-heading-color font-semibold"> We Make Every Journey <span className="text-secondary"> Seamless & Inspiring</span></h2>
+                    <p className="text-[1.6rem] text-heading-color">
                         From thrilling wildlife safaris to serene escapes, we craft experiences that connect you with nature, culture, and unforgettable memories — all backed by expert planning and personalized care.
                     </p>
                     <ul className="flex flex-col gap-4">
                         {features.map((feature, idx) => (
-                            <li className="flex items-center text-[1.8rem] justify-start gap-5 font-semibold text-heading-color" key={idx}>
+                            <li className="flex items-center text-[1.6rem] justify-start gap-5 font-medium text-heading-color" key={idx}>
                                 <span className="text-primary">
                                     <Icon icon="garden:check-badge-fill-12" />
                                 </span>
@@ -88,7 +88,7 @@ const WhyChooseUs = () => {
                                 className="w-[7rem] h-auto object-contain"
                                 priority
                             />
-                            <span className="text-[2.5rem] text-white font-semibold">
+                            <span className="text-[2rem] text-white font-semibold">
                                 Award-Winning Adventures
                             </span>
                         </div>
@@ -107,11 +107,11 @@ const WhyChooseUs = () => {
                                         className="w-[5rem] h-[5rem] object-contain"
                                         priority
                                     />
-                                    <span className="text-[2.4rem] NewFont2 text-heading-color font-semibold">
+                                    <span className="text-[2.2rem] text-heading-color font-medium">
                                         {card.title}
                                     </span>
                                 </div>
-                                <p className="text-[2rem] text-heading-color">
+                                <p className="text-[1.6rem] leading-[1.5] text-heading-color">
                                     {card.desc}
                                 </p>
                             </div>

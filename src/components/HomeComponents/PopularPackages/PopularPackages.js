@@ -58,14 +58,14 @@ const PopularPackages = () => {
                 />
             </motion.div>
             <div className="custom-container relative flex flex-col items-center justify-center md:gap-[4.8rem] gap-[1.5rem]">
-                <div className="Heading text-center flex flex-col items-center justify-center gap-[1.6rem]">
-                    <span className="text-primary text-[1.8rem] font-semibold uppercase">
+                <div className="Heading text-center flex flex-col items-center justify-center gap-[2rem]">
+                    <span className="text-primary ButtonFont text-[4rem] leading-[1] font-medium tracking-wide">
                         Popular Packages
                     </span>
-                    <h2 className="text-white uppercase">
+                    <h2 className="text-white font-semibold">
                         POPULAR WILDLIFE<span className="text-secondary"> TOUR PACKAGES</span>
                     </h2>
-                    <p className="text-[2rem] text-white">Explore our most sought-after travel experiences</p>
+                    <p className="text-[1.6rem] text-white leading-[1.5]">Explore our most sought-after travel experiences</p>
                 </div>
                 <div className="package-cardsSlider w-full">
                     <Swiper
