@@ -5,6 +5,9 @@ import HeroSec from '@/components/HomeComponents/HeroSec/HeroSec';
 import LetestNews from '@/components/HomeComponents/LetestNews/LetestNews';
 import PopularPackages from '@/components/HomeComponents/PopularPackages/PopularPackages';
 import SafariSec from '@/components/HomeComponents/SafariSec/SafariSec';
+import Testimonial from '@/components/HomeComponents/Testimonial/Testimonial';
+import TestimonialNew from '@/components/HomeComponents/TestimonialNew/TestimonialNew';
+import TourGuide from '@/components/HomeComponents/TourGuide/TourGuide';
 import WhyChooseUs from '@/components/HomeComponents/WhyChooseUs/WhyChooseUs';
 import React from 'react';
 export default function HomePage() {
@@ -19,6 +22,8 @@ export default function HomePage() {
         <PopularPackages />
         <SafariSec />
         <WhyChooseUs />
+        <TestimonialNew />
+        <TourGuide />
         <LetestNews />
       </div>
     </>

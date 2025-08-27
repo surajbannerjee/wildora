@@ -70,7 +70,7 @@ const WhyChooseUs = () => {
                     <AppButton href="#" classes="mt-[3rem]">
                         Explore More
                     </AppButton>
-                    <div className="relative w-fit flex items-center justify-start mt-10">
+                    <div className="relative w-fit flex flex-col-reverse items-start gap-[2rem] justify-start mt-10">
                         <Image
                             src={HERO_IMAGE2}
                             alt="Why Choose Us Background"
@@ -79,7 +79,7 @@ const WhyChooseUs = () => {
                             className="w-[40rem] h-[18rem] object-cover rounded-[2.2rem] shadow-md"
                             priority
                         />
-                        <div className=" bg-primary absolute md:right-[-12rem] right-[-5rem] top-[-10rem] rounded-[2.2rem] px-[1.5rem] py-[3.5rem] w-[22rem] flex flex-col items-center justify-center gap-[2rem] text-center shadow-2xl">
+                        <div className=" bg-primary sm:absolute relative md:right-[-12rem] sm:right-[-5rem] sm:top-[-10rem] rounded-[2.2rem] px-[1.5rem] py-[3.5rem] w-[22rem] flex flex-col items-center justify-center gap-[2rem] text-center shadow-2xl">
                             <Image
                                 src={ICON1}
                                 alt="Why Choose Us Background"
@@ -95,7 +95,7 @@ const WhyChooseUs = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/2 h-full w-full">
-                    <div className="grid grid-cols-2 gap-[3rem]">
+                    <div className="grid sm:grid-cols-2 grid-cols-1 gap-[3rem]">
                         {whyChooseUsCards.map((card, idx) => (
                             <div key={idx} className="relative item flex items-center flex-col bg-[#EAF4E6] py-[4rem] px-[2.5rem] rounded-[2.2rem] shadow-[none] hover:shadow-lg transition-shadow duration-300">
                                 <div className="pb-[2rem] mb-[2rem] border-b-1 border-B w-full flex items-start flex-col gap-4">

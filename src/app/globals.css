@@ -43,6 +43,8 @@ html {
   --color-dark: #11221c;
   --color-dark2: #14261c;
   --color-lightGreen: rgb(115 180 88 / 33%);
+  --color-lightGreen2: #73b4582b;
+  --color-lightGreen3: #e9f1ec;
 }
 
 /* @theme inline {
@@ -125,7 +127,6 @@ input.form-control:focus {
   .ButtonFont {
     font-family: var(--accent-font);
   }
- 
 }
 
 h1 {
@@ -240,7 +241,7 @@ h6 {
 .animate-fadein-up {
   animation: fadeinUp 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.swiper-pagination-bullet {
+.hero-section .swiper-pagination-bullet {
   border-radius: 50%;
   width: 70px !important;
   height: 70px !important;
@@ -248,10 +249,11 @@ h6 {
   filter: blur(1px);
   transition: all 0.3s ease-in-out;
 }
-span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+.hero-section span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   filter: blur(0);
 }
-.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+.hero-section
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
   width: fit-content;
   top: 50%;
   transform: translateY(-50%);
@@ -262,7 +264,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   flex-direction: column;
   gap: 1.5rem;
 }
-.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets::after {
+.hero-section
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -297,6 +300,9 @@ img.hamburger_icon {
 @media (max-width: 768px) {
   .package-cardsSlider .swiper-wrapper {
     padding: 4rem 0rem;
+  }
+  section.TestimonialNewSec {
+    background-image: none !important;
   }
   /* .package-cardsSlider .swiper-wrapper .swiper-slide {
     width: 100% !important;
@@ -339,6 +345,9 @@ img.hamburger_icon {
 .blink-on-hover:hover {
   animation: ZoomInOut 1s infinite;
 }
+.blink {
+  animation: ZoomInOut 1s infinite;
+}
 @keyframes ZoomInOut {
   0% {
     transform: scale(1);
@@ -349,4 +358,7 @@ img.hamburger_icon {
   100% {
     transform: scale(1);
   }
+}
+main {
+  background: #fff;
 }

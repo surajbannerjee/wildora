@@ -8,11 +8,11 @@ import { AppButton } from "../Button";
 
 const navItems = [
     { label: "Home", href: "/" },
-    { label: "About Us	", href: "#" },
-    { label: "Destinations", href: "#" },
-    { label: "Packages", href: "#" },
-    { label: "Gallery", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "About Us", href: "/about" },
+    { label: "Destinations", href: "/destinations" },
+    { label: "Packages", href: "/packages" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Contact", href: "/contact" },
 ];
 
 const Header = () => {

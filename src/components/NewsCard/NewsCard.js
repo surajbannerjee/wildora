@@ -7,7 +7,7 @@ import { AppButton } from "../Button";
 
 const NewsCard = ({ image, title, date, link, userImg, userName = "Wildora Team", flexDirection = "flex-row" }) => {
     return (
-        <div className={`news-card flex ${flexDirection} items-stretch gap-[1rem]`}>
+        <div className={`news-card  flex ${flexDirection} items-stretch gap-[1rem]`}>
             <Image
                 src={image}
                 alt="News Thumbnail"

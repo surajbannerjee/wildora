@@ -45,3 +45,16 @@ export const MAN = URL("/assets/images/man.png");
 export const HIKING = URL("/assets/images/hiking.png");
 export const BG_SLIDE = URL("/assets/images/BgSlide.png");
 export const AVATAR = URL("/assets/images/avtar.png");
+export const FTR_VIDEO = URL("/assets/videos/FtrVideo.mp4");
+// team images
+export const TEAM_3_1 = URL("/assets/images/team_3_1.jpg");
+export const TEAM_3_2 = URL("/assets/images/team_3_2.jpg");
+export const TEAM_3_3 = URL("/assets/images/team_3_3.jpg");
+export const TEAM_3_4 = URL("/assets/images/team_3_4.jpg");
+export const TEAM_3_5 = URL("/assets/images/team_3_5.jpg");
+export const MAP = URL("/assets/images/map.png");
+export const TESTIMONIAL_IMAGE = URL("/assets/images/testiimg.png");
+export const BLOG_BG_1 = URL("/assets/images/blog_bg_1.png");
+export const HERO_SHAPE_5 = URL("/assets/images/hero-shape5.png");
+export const CONTACT_BG_7 = URL("/assets/images/contact_bg_7.jpg");
+export const ABOUT_BG = URL("/assets/images/aboutbg.jpg");

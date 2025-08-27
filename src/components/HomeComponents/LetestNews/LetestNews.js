@@ -67,7 +67,7 @@ const LatestNews = () => {
                             Explore the <span className="text-secondary">Latest Travel News</span>
                         </h2>
                     </div>
-                    <div className="lg:w-[50%] w-[100%]">
+                    <div className="lg:w-[50%] w-[100%] flex justify-end">
                         <AppButton href="/news" >
                             View All News
                         </AppButton>
