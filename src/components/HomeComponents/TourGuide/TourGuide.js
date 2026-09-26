@@ -20,15 +20,15 @@ const TourGuide = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundBlendMode: "overlay",
             }}>
-            <div className="h-[35rem] w-[30rem] absolute bottom-0 left-0 z-[0]">
-                <Image src={HERO_SHAPE_5} alt="Tour Guide Background" layout="fill" objectFit="contain" className=" h-full w-full object-left-bottom" />
+            <div className="h-[20rem] sm:h-[30rem] md:h-[35rem] w-[18rem] sm:w-[25rem] md:w-[30rem] absolute bottom-0 left-0 z-[0] opacity-30 md:opacity-80 pointer-events-none">
+                <Image src={HERO_SHAPE_5} alt="Tour Guide Background" fill className="h-full w-full object-contain object-left-bottom" />
             </div>
-            <div className="h-[35rem] w-[30rem] absolute bottom-0 right-0 z-[0] transform scale-x-[-1]">
-                <Image src={HERO_SHAPE_5} alt="Tour Guide Background" layout="fill" objectFit="contain" className=" h-full w-full object-left-bottom" />
+            <div className="h-[20rem] sm:h-[30rem] md:h-[35rem] w-[18rem] sm:w-[25rem] md:w-[30rem] absolute bottom-0 right-0 z-[0] transform scale-x-[-1] opacity-30 md:opacity-80 pointer-events-none">
+                <Image src={HERO_SHAPE_5} alt="Tour Guide Background" fill className="h-full w-full object-contain object-left-bottom" />
             </div>
             <div className="custom-container relative flex flex-col items-center justify-center md:gap-[4.8rem] gap-[1.5rem]">
-                <div className="Heading text-center flex flex-col items-center justify-center gap-[2rem]">
-                    <span className="text-primary ButtonFont text-[4rem] leading-[1] font-medium tracking-wide">
+                <div className="Heading text-center flex flex-col items-center justify-center gap-[1.5rem] sm:gap-[2rem]">
+                    <span className="text-primary ButtonFont text-[3rem] sm:text-[3.5rem] md:text-[4rem] leading-[1] font-medium tracking-wide">
                         Meet with Guide
                     </span>
                     <h2 className="text-white font-semibold">
@@ -62,7 +62,7 @@ const TourGuide = () => {
                     `}</style>
                     <Swiper
                         modules={[Pagination, Autoplay]}
-                        spaceBetween={50}
+                        spaceBetween={20}
                         slidesPerView={1}
                         speed={1000}
                         loop={true}
@@ -70,10 +70,12 @@ const TourGuide = () => {
                         pagination={{ clickable: true }}
                         autoplay={{ delay: 3000, disableOnInteraction: false }}
                         breakpoints={{
-                            640: { slidesPerView: 1 },
-                            768: { slidesPerView: 3 },
-                            1024: { slidesPerView: 4 },
-                            1400: { slidesPerView: 4 },
+                            0: { slidesPerView: 1, spaceBetween: 20 },
+                            540: { slidesPerView: 2, spaceBetween: 20 },
+                            768: { slidesPerView: 3, spaceBetween: 24 },
+                            1024: { slidesPerView: 3, spaceBetween: 30 },
+                            1280: { slidesPerView: 4, spaceBetween: 30 },
+                            1400: { slidesPerView: 4, spaceBetween: 50 },
                         }}
                         className="w-full pb-[5rem]! "
                     >

@@ -58,47 +58,46 @@ const PopularPackages = () => {
                 />
             </motion.div>
             <div className="custom-container relative flex flex-col items-center justify-center md:gap-[4.8rem] gap-[1.5rem]">
-                <div className="Heading text-center flex flex-col items-center justify-center gap-[2rem]">
-                    <span className="text-primary ButtonFont text-[4rem] leading-[1] font-medium tracking-wide">
+                <div className="Heading text-center flex flex-col items-center justify-center gap-[1.5rem] sm:gap-[2rem]">
+                    <span className="text-primary ButtonFont text-[3rem] sm:text-[3.5rem] md:text-[4rem] leading-[1] font-medium tracking-wide">
                         Popular Packages
                     </span>
                     <h2 className="text-white font-semibold">
                         POPULAR WILDLIFE<span className="text-secondary"> TOUR PACKAGES</span>
                     </h2>
-                    <p className="text-[1.6rem] text-white leading-[1.5]">Explore our most sought-after travel experiences</p>
+                    <p className="text-[1.5rem] sm:text-[1.6rem] text-white leading-[1.5]">Explore our most sought-after travel experiences</p>
                 </div>
                 <div className="package-cardsSlider w-full">
                     <Swiper
                         ref={swiperRef}
                         modules={[Autoplay]}
-                        slidesPerView={1.2}
-                        spaceBetween={24}
+                        slidesPerView={3}
+                        spaceBetween={20}
                         centeredSlides={centeredSlides}
-
                         loop={true}
                         autoplay={{ delay: 3000, disableOnInteraction: false }}
                         breakpoints={{
-                            0: { slidesPerView: 1 },
-                            640: { slidesPerView: 2 },
-                            1024: { slidesPerView: 2 },
-                            1280: { slidesPerView: 3 },
+                            0: { slidesPerView: 1, spaceBetween: 16 },
+                            640: { slidesPerView: 1.5, spaceBetween: 20 },
+                            768: { slidesPerView: 2, spaceBetween: 24 },
+                            1024: { slidesPerView: 2, spaceBetween: 24 },
+                            1280: { slidesPerView: 3, spaceBetween: 24 },
                         }}
                         onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
                         className="w-full"
                     >
-                        {packages.map((pkg, idx) => (
+                        {packages.slice(0, 10).map((pkg, idx) => (
                             <SwiperSlide key={pkg.id}
-                                onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
-                                onMouseLeave={() => swiperRef.current.swiper.autoplay.start()}>
+                                onMouseEnter={() => swiperRef.current?.swiper?.autoplay?.stop()}
+                                onMouseLeave={() => swiperRef.current?.swiper?.autoplay?.start()}>
                                 <div
                                     className={`transition-all ease-in-out duration-300 ${activeIndex === idx
-                                        ? "md:scale-105 blur-none shadow-[0_4px_30px_rgba(0,0,0,0.8)] z-10 opacity-100"
-                                        : "md:scale-95  md:opacity-100 opacity-0"
+                                        ? "md:scale-105 blur-none md:shadow-[0_4px_30px_rgba(0,0,0,0.8)] z-10 opacity-100"
+                                        : "md:scale-95 opacity-100 md:opacity-100"
                                         }`}
-                                    onTouchStart={() => swiperRef.current.swiper.autoplay.stop()}
-                                    onTouchMove={() => swiperRef.current.swiper.autoplay.stop()}
-                                    onTouchEnd={() => swiperRef.current.swiper.autoplay.start()}
-
+                                    onTouchStart={() => swiperRef.current?.swiper?.autoplay?.stop()}
+                                    onTouchMove={() => swiperRef.current?.swiper?.autoplay?.stop()}
+                                    onTouchEnd={() => swiperRef.current?.swiper?.autoplay?.start()}
                                 >
                                     <PackageCard
                                         title={pkg.title}

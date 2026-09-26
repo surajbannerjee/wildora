@@ -32,29 +32,34 @@ const TestimonialNew = () => {
             }}
         >
             <div className="custom-container relative flex items-center justify-end md:gap-[4.8rem] gap-[1.5rem]">
-                <div className="md:w-1/2 w-full lg:mt-[0] mt-[30px] flex flex-col items-start justify-center h-full gap-8">
-                    <span className="text-primary ButtonFont text-[4rem] leading-[1] font-medium tracking-wide">
+                <div className="md:w-1/2 w-full lg:mt-0 mt-[10px] flex flex-col items-start justify-center h-full gap-6 sm:gap-8">
+                    <span className="text-primary ButtonFont text-[3rem] sm:text-[3.5rem] md:text-[4rem] leading-[1] font-medium tracking-wide">
                         Testimonial
                     </span>
                     <h2 className="text-heading-color font-semibold">
-                        {" "}
                         What Client Say{" "}
                         <span className="text-secondary"> About us</span>
                     </h2>
                     {/* testimonial Slider */}
-                    <div className="w-full flex items-center justify-center mt-[5rem] relative">
+                    <div className="w-full flex items-center justify-center mt-[2.5rem] sm:mt-[5rem] relative">
                         <style>{`
                             .vertical-swiper-container {
-                                height: 300px;
-                                min-height: 300px;
+                                height: 280px;
+                                min-height: 280px;
                                 max-height: 100vh;
                                 overflow: hidden;
                             }
+                            @media (min-width: 640px) {
+                                .vertical-swiper-container {
+                                    height: 300px;
+                                    min-height: 300px;
+                                }
+                            }
                             .vertical-swiper-container .swiper-slide {
-                                height: 300px !important;
+                                height: 100% !important;
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;
+                                justify-content: flex-start;
                             }
                             /* Custom arrow styles */
                             .swiper-button-prev, .swiper-button-next {
@@ -62,9 +67,9 @@ const TestimonialNew = () => {
                                 background: transparent;
                                 border-radius: 50%;
                                 border: 2px solid var(--color-primary);
-                                width: 40px;
-                                height: 40px;
-                                bottom: 50px;
+                                width: 36px;
+                                height: 36px;
+                                bottom: 20px;
                                 top: auto;
                                 box-shadow: 0 2px 8px rgba(0,0,0,0.1);
                                 display: flex;
@@ -72,6 +77,14 @@ const TestimonialNew = () => {
                                 align-items: center;
                                 justify-content: center;
                                 position: absolute;
+                                cursor: pointer;
+                            }
+                            @media (min-width: 640px) {
+                                .swiper-button-prev, .swiper-button-next {
+                                    width: 40px;
+                                    height: 40px;
+                                    bottom: 50px;
+                                }
                             }
                             .swiper-button-prev:hover, .swiper-button-next:hover {
                                 background: var(--color-primary);
@@ -81,7 +94,7 @@ const TestimonialNew = () => {
                               display: none;
                             }
                             .swiper-button-prev {
-                                right: 50px;
+                                right: 48px;
                                 left: auto;
                             }
                             .swiper-button-next {

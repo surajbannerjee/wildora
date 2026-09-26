@@ -49,8 +49,8 @@ const TextSlider = () => {
                         className="flex items-center justify-center"
                         style={{ minWidth: SLIDE_WIDTH, maxWidth: SLIDE_WIDTH }}
                     >
-                        <div className="tm-box-title">
-                            <span className="text-white xl:text-[2rem] md:text-[2rem] text-[1.6rem]">
+                        <div className="tm-box-title whitespace-nowrap">
+                            <span className="text-white xl:text-[2rem] md:text-[2rem] text-[1.5rem] sm:text-[1.6rem] whitespace-nowrap">
                                 Call us now to plan your next safari{" "}
                                 <Link
                                     href={"tel:+1234567891"}

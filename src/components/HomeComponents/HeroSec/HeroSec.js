@@ -93,10 +93,10 @@ const HeroSec = () => {
                             />
                             <div className="absolute inset-0 bg-black/50" />
                         </div>
-                        <div className="custom-container relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-                            <div className="w-full flex flex-col items-center gap-[30px] md:max-w-[80%] 2xl:max-w-[100%]">
+                        <div className="custom-container relative z-10 flex flex-col items-center justify-center h-full text-center text-white pt-[6rem] pb-[10rem] md:pt-0 md:pb-0">
+                            <div className="w-full flex flex-col items-center gap-[1.5rem] sm:gap-[2.4rem] md:gap-[30px] max-w-[95%] sm:max-w-[85%] md:max-w-[80%] 2xl:max-w-[100%]">
                                 <h1 className="font-semibold">{slide.heading}</h1>
-                                <p className="text-[20px]">{slide.description}</p>
+                                <p className="text-[1.5rem] sm:text-[1.8rem] md:text-[20px] max-w-[65rem]">{slide.description}</p>
                                 <AppButton href={slide.button.href}>{slide.button.text}</AppButton>
                             </div>
                         </div>
@@ -104,21 +104,21 @@ const HeroSec = () => {
                 ))}
             </Swiper>
 
-            {/* Thumbnail Pagination Swiper (vertical, right, centered) */}
-            <div className="absolute xl:right-[0%] md:right-[1.2%] md:left-auto left-1/2 -translate-x-1/2 md:bottom-auto bottom-[10vh] md:top-1/2 md:-translate-y-1/2 z-[9] flex flex-col justify-center">
-                <div className="xl:h-[300px] md:h-[380px] h-[80px] md:w-[100px] w-[70vw]">
+            {/* Thumbnail Pagination Swiper (vertical on desktop, horizontal bottom on mobile) */}
+            <div className="absolute xl:right-[0%] md:right-[1.2%] md:left-auto left-1/2 -translate-x-1/2 md:bottom-auto bottom-[2.5rem] sm:bottom-[3.5rem] md:top-1/2 md:-translate-y-1/2 z-[9] flex flex-col justify-center">
+                <div className="xl:h-[300px] md:h-[380px] h-[60px] sm:h-[70px] md:w-[100px] w-[88vw] max-w-[340px] sm:max-w-[400px]">
                     <Swiper
                         modules={[Thumbs]}
                         onSwiper={setThumbsSwiper}
                         slidesPerView={4}
                         direction={thumbDirection}
-                        spaceBetween={16}
+                        spaceBetween={thumbDirection === "horizontal" ? 10 : 16}
                         watchSlidesProgress
                         className="thumbs-swiper h-full"
                     >
                         {slides.map((slide, idx) => (
                             <SwiperSlide key={idx} className="!flex !items-center !justify-center">
-                                <div className="flex items-center justify-center rounded-full overflow-hidden border-3 xl:h-[60px] xl:w-[60px] md:h-[60px] md:w-[60px] h-[50px] w-[50px] border-white shadow cursor-pointer transition-all duration-300 hover:border-primary ">
+                                <div className="flex items-center justify-center rounded-full overflow-hidden border-2 md:border-3 xl:h-[60px] xl:w-[60px] md:h-[60px] md:w-[60px] h-[45px] w-[45px] sm:h-[52px] sm:w-[52px] border-white shadow cursor-pointer transition-all duration-300 hover:border-primary">
                                     <Image
                                         src={slide.image}
                                         alt={slide.alt}
@@ -135,7 +135,6 @@ const HeroSec = () => {
             <style jsx global>{`
                 .thumbs-swiper .swiper-slide-thumb-active > div {
                     border-color: #73b458 !important;
-                   
                 }
             `}</style>
         </section>

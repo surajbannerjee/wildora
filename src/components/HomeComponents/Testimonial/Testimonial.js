@@ -110,7 +110,7 @@ const Testimonial = () => {
                                         alt={t.name}
                                         width={100}
                                         height={100}
-                                        className={`rounded-full h-[6rem] w-[6rem] border-2 border-primary shadow-lg transition ${activeIdx === idx ? "scale-120" : "scale-100"}`}
+                                        className={`rounded-full h-[6rem] w-[6rem] border-2 border-primary shadow-lg transition-all${activeIdx === idx ? "scale-120" : "scale-100"}`}
                                         style={{ objectFit: "cover" }}
                                     />
                                     {/* Blinking Badge */}

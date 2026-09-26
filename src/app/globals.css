@@ -1,35 +1,52 @@
 @import "tailwindcss";
 
-* {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
   -moz-osx-font-smoothing: grayscale;
-  /* Firefox */
   -webkit-font-smoothing: antialiased;
-  transition: all 0.3s linear;
-  /* WebKit  */
+  transition: all 0.3s ease-in-out;
 }
+
 :root {
   --heading-font: "Manrope", sans-serif;
   --body-font: "Inter", sans-serif;
   --accent-font: "Just Another Hand", cursive;
 }
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   font-size: 62.5%;
   font-family: var(--body-font);
 }
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #11221c;
-} */
+/* Lenis Smooth Scroll Recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
 
-/* Change this global values */
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 @theme {
   --color-primary: #73b458;
   --color-secondary: #f29727;
@@ -47,58 +64,48 @@ html {
   --color-lightGreen3: #e9f1ec;
 }
 
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #11221c;
-    --foreground: #fff;
-  }
-} */
 html,
 body {
   scroll-padding-top: 10rem;
-  scroll-behavior: smooth;
+
 }
+
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 3px;
+  width: 6px;
+  height: 4px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 8px rgb(202, 202, 202);
-  border-radius: 100px;
-  transition: all 0.3s ease-in-out;
+  background: #f1f5f0;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--color-primary);
   border-radius: 100px;
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-secondary);
 }
+
 body {
   background: #f7f8fb;
   color: #1e2e48;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   font-size: 1.6rem;
   line-height: 1.5;
-  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+  transition: color 0.25s ease, opacity 0.25s ease;
 }
 
 .underline {
@@ -119,13 +126,27 @@ input.form-control:focus {
 
 @layer components {
   .custom-container {
-    @apply max-w-[144rem] w-full 2xl:px-[0rem] px-[2rem] lg:mx-auto;
+    @apply max-w-[144rem] w-full 2xl:px-[0rem] px-[1.5rem] sm:px-[2rem] mx-auto;
   }
+
   .sectionPadding {
     @apply py-[3rem] md:py-[4rem] lg:py-[6rem] 2xl:py-[8rem];
   }
+
   .ButtonFont {
     font-family: var(--accent-font);
+  }
+
+  .NewFont {
+    font-family: var(--heading-font);
+  }
+
+  .NewFont2 {
+    font-family: var(--heading-font);
+  }
+
+  .NewFont3 {
+    font-family: var(--body-font);
   }
 }
 
@@ -133,21 +154,25 @@ h1 {
   font-size: 8rem;
   line-height: 1;
 }
+
 @media (max-width: 1600px) {
   h1 {
     font-size: 7.5rem;
   }
 }
+
 @media (max-width: 1440px) {
   h1 {
     font-size: 7rem;
   }
 }
+
 @media (max-width: 1280px) {
   h1 {
     font-size: 6.6rem;
   }
 }
+
 @media (max-width: 1024px) {
   h1 {
     font-size: 6.2rem;
@@ -160,25 +185,41 @@ h1 {
   }
 }
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
 h2 {
   font-size: 5.5rem;
   line-height: 1.3;
 }
+
 @media (max-width: 1600px) {
   h2 {
     font-size: 5rem;
   }
 }
+
 @media (max-width: 1440px) {
   h2 {
     font-size: 4.8rem;
   }
 }
+
 @media (max-width: 1280px) {
   h2 {
     font-size: 4.5rem;
   }
 }
+
 @media (max-width: 1024px) {
   h2 {
     font-size: 4rem;
@@ -190,6 +231,19 @@ h2 {
     font-size: 3.2rem;
   }
 }
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  h2 {
+    font-size: 2.3rem;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -198,13 +252,12 @@ h5,
 h6 {
   font-family: var(--heading-font);
 }
+
 .custom-gradient {
-  background: linear-gradient(
-    46deg,
-    rgb(151 178 208 / 60%) 0%,
-    rgb(198 215 233 / 60%) 50%,
-    rgb(220 232 244 / 60%) 100%
-  );
+  background: linear-gradient(46deg,
+      rgb(151 178 208 / 60%) 0%,
+      rgb(198 215 233 / 60%) 50%,
+      rgb(220 232 244 / 60%) 100%);
 }
 
 @keyframes arrowUp {
@@ -227,20 +280,44 @@ h6 {
   animation: arrowUp 1.2s infinite;
 }
 
-/* Add this to your global CSS or inside a <style jsx global> block */
-@keyframes fadeinUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
+@keyframes floatGentle {
+
+  0%,
+  100% {
+    transform: translateY(0px);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  50% {
+    transform: translateY(-8px);
   }
 }
-.animate-fadein-up {
-  animation: fadeinUp 1s cubic-bezier(0.23, 1, 0.32, 1);
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
 }
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(242, 151, 39, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(242, 151, 39, 0.65);
+  }
+}
+
+.animate-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .hero-section .swiper-pagination-bullet {
   border-radius: 50%;
   width: 70px !important;
@@ -249,11 +326,12 @@ h6 {
   filter: blur(1px);
   transition: all 0.3s ease-in-out;
 }
+
 .hero-section span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   filter: blur(0);
 }
-.hero-section
-  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+
+.hero-section .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
   width: fit-content;
   top: 50%;
   transform: translateY(-50%);
@@ -264,8 +342,8 @@ h6 {
   flex-direction: column;
   gap: 1.5rem;
 }
-.hero-section
-  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets::after {
+
+.hero-section .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -275,10 +353,11 @@ h6 {
   top: 5%;
   transform: translateX(-50%);
 }
+
 img.hamburger_icon {
-  filter: invert(62%) sepia(22%) saturate(816%) hue-rotate(58deg)
-    brightness(96%) contrast(100%);
+  filter: invert(62%) sepia(22%) saturate(816%) hue-rotate(58deg) brightness(96%) contrast(100%);
 }
+
 .WhyChoose::after {
   content: "";
   position: absolute;
@@ -286,13 +365,12 @@ img.hamburger_icon {
   height: 100%;
   top: 0;
   left: 0;
-  background: radial-gradient(
-    circle,
-    rgba(242, 41, 91, 0) 0%,
-    rgba(20, 38, 28, 1) 100%
-  );
+  background: radial-gradient(circle,
+      rgba(242, 41, 91, 0) 0%,
+      rgba(20, 38, 28, 1) 100%);
   z-index: 1;
 }
+
 .package-cardsSlider .swiper-wrapper {
   padding: 8rem 0rem;
 }
@@ -301,33 +379,36 @@ img.hamburger_icon {
   .package-cardsSlider .swiper-wrapper {
     padding: 4rem 0rem;
   }
+
   section.TestimonialNewSec {
     background-image: none !important;
   }
-  /* .package-cardsSlider .swiper-wrapper .swiper-slide {
-    width: 100% !important;
-  } */
 }
+
 @-webkit-keyframes translateBg {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     -webkit-transform: translate3d(-2250px, 0, 0);
     transform: translate3d(-2250px, 0, 0);
   }
 }
+
 @keyframes translateBg {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     -webkit-transform: translate3d(-2250px, 0, 0);
     transform: translate3d(-2250px, 0, 0);
   }
 }
+
 .bgSlideImage {
   position: absolute;
   bottom: 0;
@@ -345,20 +426,243 @@ img.hamburger_icon {
 .blink-on-hover:hover {
   animation: ZoomInOut 1s infinite;
 }
+
 .blink {
   animation: ZoomInOut 1s infinite;
 }
+
 @keyframes ZoomInOut {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 main {
   background: #fff;
+}
+
+/* ==========================================================================
+   Sliding Auth Modal Animation (Double-Sided Sliding Overlay)
+   ========================================================================== */
+.auth-sliding-container {
+  position: relative;
+  background-color: #fff;
+  border-radius: 2.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  width: 100%;
+  max-width: 860px;
+  min-height: 560px;
+}
+
+.auth-form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.auth-sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.auth-sliding-container.right-panel-active .auth-sign-in-container {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.auth-sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.auth-sliding-container.right-panel-active .auth-sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: authFadeIn 0.6s;
+  pointer-events: auto;
+}
+
+@keyframes authFadeIn {
+
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.auth-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 50;
+}
+
+.auth-sliding-container.right-panel-active .auth-overlay-container {
+  transform: translateX(-100%);
+}
+
+.auth-overlay {
+  background: linear-gradient(135deg, #11221C 0%, #173424 40%, #DF6951 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.auth-sliding-container.right-panel-active .auth-overlay {
+  transform: translateX(50%);
+}
+
+.auth-overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 4rem;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.auth-overlay-left {
+  transform: translateX(-20%);
+}
+
+.auth-sliding-container.right-panel-active .auth-overlay-left {
+  transform: translateX(0);
+}
+
+.auth-overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.auth-sliding-container.right-panel-active .auth-overlay-right {
+  transform: translateX(20%);
+}
+
+/* Mobile Fallback for Auth Modal (screens < 640px) */
+@media (max-width: 639px) {
+  .auth-sliding-container {
+    min-height: auto;
+    max-width: 92vw;
+  }
+
+  .auth-form-container {
+    position: relative;
+    width: 100% !important;
+    left: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    height: auto !important;
+  }
+
+  .auth-overlay-container {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   PROFESSIONAL PRINT VOUCHER & EXPEDITION PERMIT PDF STYLES
+   Ensures the Safari Voucher looks like a genuine, luxury official
+   government-compliant travel permit when printed or exported as PDF.
+   ============================================================ */
+@media screen {
+  #printable-safari-voucher {
+    display: none;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+
+  /* Reset webpage shell for pristine paper output */
+  html, body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide all website navigation, banners, widgets, and buttons */
+  header,
+  footer,
+  nav,
+  .breadcrumb-banner-section,
+  .web-only-view,
+  .no-print,
+  button,
+  .anime-fade-in-container,
+  [data-lenis-prevent],
+  .fixed,
+  .sticky {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Render solely the dedicated official voucher document */
+  #printable-safari-voucher {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
+    page-break-inside: avoid !important;
+  }
+
+  #printable-safari-voucher * {
+    visibility: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }

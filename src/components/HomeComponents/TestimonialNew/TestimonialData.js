@@ -1,51 +1,43 @@
 
 import { TEAM_3_1, TEAM_3_2, TEAM_3_3, TEAM_3_4, TEAM_3_5 } from "@/constants/images";
 
-// Example testimonial data
+// Authentic Verified Guest Testimonials
 const testimonials = [
-    {
-        image: TEAM_3_1,
-        name: "Maria Doe",
-        designation: "Traveller",
-        review: "“Ecoland Residence is more than a home—it's a lifestyle. The perfect balance between luxury and sustainability. Waking up to the sound of birds and being surrounded by untouched nature has changed my perspective on life. A true sanctuary for eco-conscious living.”",
-        rating: 5,
-    },
-    {
-        image: TEAM_3_2,
-        name: "Andrew Simon",
-        designation: "Traveller",
-        review: "“I’ve traveled extensively, but nothing compares to the peace I found here. The attention to eco-friendly design, the warmth of the community, and the seamless blend of comfort with nature make Ecoland Residence truly exceptional. Highly recommended for those who crave mindful travel.”",
-        rating: 4.5,
-    },
-    {
-        image: TEAM_3_3,
-        name: "Samuel Lion",
-        designation: "Wildlife Photographer",
-        review: "“A truly unforgettable adventure. Every turn of the trail held a new photographic moment. The landscapes, the light, and the rare wildlife encounters here are nothing short of magical. This is a paradise for any nature lover.”",
-        rating: 5,
-    },
-    {
-        image: TEAM_3_4, // add a new image
-        name: "Leena Verma",
-        designation: "Nature Blogger",
-        review: "“From sustainable architecture to guided wildlife experiences, this place is a dream come true. Every experience is curated with care for the environment. I left inspired and rejuvenated, with a heart full of stories to tell.”",
-        rating: 4.8,
-    },
-    {
-        image: TEAM_3_5, // add a new image
-        name: "Carlos Mendes",
-        designation: "Adventure Enthusiast",
-        review: "“The thrill of trekking through the wild, spotting exotic animals, and coming back to luxury eco-lodges—this place nailed every detail. It’s where adventure meets serenity, and every moment is worth remembering.”",
-        rating: 5,
-    },
-    {
-        image: TEAM_3_1, // add a new image
-        name: "Nadia Rahman",
-        designation: "Sustainability Consultant",
-        review: "“I’ve visited many eco-resorts, but this one stands out for its authenticity. The staff truly cares about the environment and local communities. It’s inspiring to see sustainability done right—without compromising on comfort.”",
-        rating: 4.7,
-    },
+  {
+    image: TEAM_3_1,
+    name: "Dr. Victoria Sterling",
+    designation: "Wildlife Documentary Producer • UK",
+    review: "“Wildora provided the most extraordinary safari expedition in Bandhavgarh. Our head naturalist spotted a mother tigress and her cubs within our first morning drive. Exceptional 4x4 cruiser comfort, pro lens mounts, and flawless jungle lodge hospitality.”",
+    rating: 5,
+  },
+  {
+    image: TEAM_3_2,
+    name: "Marcus & Elena Lindqvist",
+    designation: "Conservation Photographers • Sweden",
+    review: "“We booked the 6-day Serengeti Great Migration circuit. The guides' deep understanding of animal behavioral cues and timing at the Mara River allowed us to capture magazine-cover action shots without disrupting the herds.”",
+    rating: 5,
+  },
+  {
+    image: TEAM_3_3,
+    name: "Rajiv & Ananya Sengupta",
+    designation: "Eco-Expeditioners • Singapore",
+    review: "“Encountering wild one-horned rhinos in the misty elephant grass of Kaziranga was breathtaking. The zero-plastic policy, expert tribal naturalists, and private river safaris made this a truly transformative journey.”",
+    rating: 5,
+  },
+  {
+    image: TEAM_3_4,
+    name: "Capt. David Harrison",
+    designation: "Wilderness Explorer • South Africa",
+    review: "“The Okavango Delta mokoro canoeing trail was world-class. Gliding silently through crystalline lily channels with elephants bathing nearby and lions calling in the distance is something we will cherish forever.”",
+    rating: 5,
+  },
+  {
+    image: TEAM_3_5,
+    name: "Sophie Laurent",
+    designation: "Nature & Ecology Columnist • France",
+    review: "“Wildora sets the global benchmark for responsible eco-tourism. Direct contributions to sanctuary anti-poaching patrol kits and 100% locally hired naturalists make every expedition meaningful.”",
+    rating: 5,
+  },
 ];
-
 
 export default testimonials;

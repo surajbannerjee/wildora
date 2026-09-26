@@ -57,71 +57,11 @@ const boxVariants = {
 };
 
 const Footer = () => {
-    // const footerRef = useRef(null);
-    // const [footerStyle, setFooterStyle] = React.useState({
-    //     left: '0',
-    //     right: '0',
-    //     zIndex: '-1',
-    //     position: 'fixed',
-    //     bottom: 0,
-    //     top: '',
-    // });
 
-    // React.useEffect(() => {
-    //     const body = document.body;
-    //     const mainElement = document.querySelector('main');
-    //     const footerElement = footerRef.current;
-    //     if (!mainElement || !footerElement) return;
-
-    //     function isViewportSmallerThanFooter(footerElement) {
-    //         return window.innerHeight < footerElement.offsetHeight;
-    //     }
-    //     function getBottomY(element) {
-    //         return element.offsetTop + element.offsetHeight;
-    //     }
-    //     function updateParallaxFooter() {
-    //         if (!footerElement || !mainElement) return;
-    //         if (isViewportSmallerThanFooter(footerElement)) {
-    //             // Reset bottom style in case user resized window
-    //             setFooterStyle((prev) => ({
-    //                 ...prev,
-    //                 bottom: '',
-    //                 top: 0,
-    //             }));
-    //         } else {
-    //             // Reset top style in case user resized window
-    //             setFooterStyle((prev) => ({
-    //                 ...prev,
-    //                 top: '',
-    //                 bottom: 0,
-    //             }));
-    //         }
-    //         if (window.scrollY > getBottomY(mainElement)) {
-    //             setFooterStyle((prev) => ({
-    //                 ...prev,
-    //                 position: 'relative',
-    //             }));
-    //             body.style.marginBottom = '0px';
-    //         } else {
-    //             body.style.marginBottom = footerElement.offsetHeight + 'px';
-    //             setFooterStyle((prev) => ({
-    //                 ...prev,
-    //                 position: 'fixed',
-    //             }));
-    //         }
-    //     }
-    //     updateParallaxFooter();
-    //     window.addEventListener('resize', updateParallaxFooter);
-    //     window.addEventListener('scroll', updateParallaxFooter);
-    //     return () => {
-    //         window.removeEventListener('resize', updateParallaxFooter);
-    //         window.removeEventListener('scroll', updateParallaxFooter);
-    //     };
-    // }, []);
 
     return (
         <footer className="transition-all duration-500">
-            <section className="relative bg-dark overflow-hidden sectionPadding pb-[3rem] rounded-[5rem_5rem_0_0] border-t-[0.5rem] border-secondary">
+            <section className="relative bg-dark overflow-hidden sectionPadding pb-[3rem] rounded-[3rem_3rem_0_0] sm:rounded-[5rem_5rem_0_0] border-t-[0.5rem] border-secondary">
                 {/* Video Background */}
                 <video
                     className="absolute inset-0 w-full h-full object-cover z-[0]"
@@ -136,7 +76,7 @@ const Footer = () => {
                 {/* Footer Content */}
                 <div className="custom-container relative z-[2]">
                     <motion.div
-                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -152,13 +92,13 @@ const Footer = () => {
                                 alt="Logo"
                                 width={250}
                                 height={100}
-                                className="mb-4 xl:w-[28rem] h-auto object-contain"
+                                className="mb-4 w-[20rem] sm:w-[24rem] xl:w-[28rem] h-auto object-contain"
                             />
-                            <p className="text-white mb-4 text-[1.6rem] leading-[1.5]">
+                            <p className="text-white mb-4 text-[1.4rem] sm:text-[1.6rem] leading-[1.5]">
                                 Wildora is your gateway to the world’s most beautiful destinations.
                                 Explore, dream, and discover with us!
                             </p>
-                            <h3 className="text-secondary font-semibold mb-4 text-[2.2rem]">Follow Us</h3>
+                            <h3 className="text-secondary font-semibold mb-4 text-[2rem] sm:text-[2.2rem]">Follow Us</h3>
                             <div className="flex gap-4 mt-2">
                                 {socialLinks.map((s, i) => (
                                     <motion.a
@@ -166,7 +106,7 @@ const Footer = () => {
                                         href={s.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-white h-[4rem] w-[4rem] flex items-center justify-center border-2 border-white hover:border-secondary rounded-full text-[2rem] hover:text-secondary transition"
+                                        className="text-white h-[3.8rem] w-[3.8rem] sm:h-[4rem] sm:w-[4rem] flex items-center justify-center border-2 border-white hover:border-secondary rounded-full text-[1.8rem] sm:text-[2rem] hover:text-secondary transition"
                                         whileHover={{ scale: 1.1 }}
                                         aria-label={s.icon}
                                     >
@@ -176,17 +116,17 @@ const Footer = () => {
                             </div>
                         </motion.div>
                         {/* Menu */}
-                        <motion.div className="md:pl-[5rem] pl-0" custom={1} variants={boxVariants}>
-                            <h3 className="text-secondary font-semibold mb-4 text-[2.2rem]">Quick Links</h3>
+                        <motion.div className="md:pl-[3rem] lg:pl-[5rem] pl-0" custom={1} variants={boxVariants}>
+                            <h3 className="text-secondary font-semibold mb-4 text-[2rem] sm:text-[2.2rem]">Quick Links</h3>
                             <ul className="space-y-[1.2rem]">
                                 {headerMenus.map((menu) => (
-                                    <li key={menu.name} className="relative group flex gap-[1rem]  items-center">
-                                        <span className="group-hover:opacity-100 transition-opacity duration-200">
-                                            <Icon icon="fa6-solid:angle-right" className="text-white group-hover:text-primary text-[1.8rem]" />
+                                    <li key={menu.name} className="relative group flex gap-[1rem] items-center">
+                                        <span className="group-hover:opacity-100 transition-all duration-200">
+                                            <Icon icon="fa6-solid:angle-right" className="text-white group-hover:text-primary text-[1.6rem] sm:text-[1.8rem]" />
                                         </span>
                                         <Link
                                             href={menu.href}
-                                            className="group-hover:pl-[0.5rem] text-white hover:text-primary font-semibold transition w-full block"
+                                            className="group-hover:pl-[0.5rem] text-white hover:text-primary text-[1.4rem] sm:text-[1.6rem] font-semibold transition-all w-full block"
                                         >
                                             {menu.name}
                                         </Link>
@@ -196,18 +136,18 @@ const Footer = () => {
                         </motion.div>
                         {/* Best Destinations */}
                         <motion.div custom={2} variants={boxVariants}>
-                            <h3 className="text-secondary font-semibold mb-4 text-[2.2rem]">
+                            <h3 className="text-secondary font-semibold mb-4 text-[2rem] sm:text-[2.2rem]">
                                 Popular Destinations
                             </h3>
                             <ul className="space-y-[1.2rem]">
                                 {bestDestinations.map((dest) => (
                                     <li key={dest.name} className="relative group flex gap-[1rem] items-center">
-                                        <span className="group-hover:opacity-100 transition-opacity duration-200">
-                                            <Icon icon="fa6-solid:angle-right" className="text-white group-hover:text-primary text-[1.8rem]" />
+                                        <span className="group-hover:opacity-100 transition-all duration-200">
+                                            <Icon icon="fa6-solid:angle-right" className="text-white group-hover:text-primary text-[1.6rem] sm:text-[1.8rem]" />
                                         </span>
                                         <Link
                                             href={dest.href}
-                                            className="group-hover:pl-[0.5rem] text-gray-300 hover:text-primary font-semibold transition w-full block"
+                                            className="group-hover:pl-[0.5rem] text-gray-300 hover:text-primary text-[1.4rem] sm:text-[1.6rem] font-semibold transition-all w-full block"
                                         >
                                             {dest.name}
                                         </Link>
@@ -217,18 +157,18 @@ const Footer = () => {
                         </motion.div>
                         {/* Contact/Newsletter */}
                         <motion.div custom={3} variants={boxVariants}>
-                            <h3 className="text-secondary font-semibold mb-4 text-[2.2rem]">
+                            <h3 className="text-secondary font-semibold mb-4 text-[2rem] sm:text-[2.2rem]">
                                 Contact
                             </h3>
                             <ul className="mb-[2rem] space-y-[1.2rem]">
                                 {contactDetails.map((item, idx) => (
-                                    <li key={idx} className="flex items-center gap-[1.2rem] text-white text-[1.6rem] hover:text-secondary transition-all duration-300">
-                                        <span className="h-[3rem] w-[3rem] flex items-center justify-center bg-secondary rounded-full text-white text-[1.6rem]">
+                                    <li key={idx} className="flex items-center gap-[1.2rem] text-white text-[1.4rem] sm:text-[1.6rem] hover:text-secondary transition-all duration-300">
+                                        <span className="h-[3rem] w-[3rem] flex items-center justify-center bg-secondary rounded-full text-white text-[1.4rem] sm:text-[1.6rem] shrink-0">
                                             <Icon icon={item.icon} />
                                         </span>
 
                                         {item.href ? (
-                                            <a href={item.href} target="_blank" rel="noopener noreferrer" className="transition-all duration-300">
+                                            <a href={item.href} target="_blank" rel="noopener noreferrer" className="transition-all duration-300 break-all">
                                                 {item.label}
                                             </a>
                                         ) : (
@@ -237,15 +177,15 @@ const Footer = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <form className="rounded-full px-5 py-2 text-[1.6rem] bg-transparent text-white relative border-1 border-secondary">
+                            <form className="rounded-full px-4 text-[1.4rem] sm:text-[1.6rem] bg-transparent text-white relative border border-secondary flex items-center min-h-[4.8rem] h-[4.8rem]">
                                 <input
                                     type="email"
                                     placeholder="Your email"
-                                    className="rounded-full pr-[4rem] pl-[1.5rem] w-full min-h-[4.2rem] text-[1.6rem] bg-transparent text-white focus:outline-none focus:ring-none focus:border-secondary"
+                                    className="rounded-full pr-[4.5rem] pl-[1rem] w-full min-h-[4.8rem] h-[4.8rem] text-[1.4rem] sm:text-[1.6rem] bg-transparent text-white focus:outline-none border-none"
                                 />
                                 <button
                                     type="submit"
-                                    className="cursor-pointer absolute right-2 top-1/2 transform -translate-y-1/2 bg-secondary text-white text-[2.62rem] rounded-full h-[4.2rem] w-[4.2rem] flex items-center justify-center hover:bg-primary transition hover:rotate-45"
+                                    className="cursor-pointer absolute right-1.5 top-1/2 transform -translate-y-1/2 bg-secondary text-white text-[2.2rem] rounded-full h-[3.8rem] w-[3.8rem] flex items-center justify-center hover:bg-primary transition-all hover:rotate-45 shrink-0"
                                     onClick={(e) => {
                                         e.preventDefault();
                                         alert("Thank you for subscribing!");
@@ -258,7 +198,7 @@ const Footer = () => {
                     </motion.div>
                     {/* Bottom Bar */}
                     <motion.div
-                        className="md:mt-[8rem] mt-[3rem] border-t border-gray-400 pt-6 flex flex-col md:flex-row items-center justify-between text-white text-[1.4rem] gap-2"
+                        className="md:mt-[8rem] sm:mt-[5rem] mt-[3rem] border-t border-gray-400/50 pt-6 flex flex-col sm:flex-row items-center justify-between text-white text-[1.3rem] sm:text-[1.4rem] gap-3 text-center sm:text-left"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.7, type: "spring" }}

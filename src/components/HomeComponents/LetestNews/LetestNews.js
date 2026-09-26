@@ -58,16 +58,16 @@ const LatestNews = () => {
             background: "linear-gradient(180deg, #EAF4E6 0%, rgba(234,244,230,0) 100%)"
         }}>
             <div className="custom-container flex flex-col gap-[3rem] md:gap-[4.8rem]">
-                <div className="titleHeader flex flex-col gap-[2rem] lg:flex-row justify-between items-start md:items-center w-full">
-                    <div className="flex flex-col gap-2 lg:w-[50%] w-[100%]">
-                        <span className="text-primary ButtonFont text-[4rem] leading-[1] font-medium tracking-wide">
+                <div className="titleHeader flex flex-col gap-[1.5rem] sm:gap-[2rem] sm:flex-row justify-between items-start sm:items-center w-full">
+                    <div className="flex flex-col gap-2 sm:w-[60%] lg:w-[50%] w-[100%]">
+                        <span className="text-primary ButtonFont text-[3rem] sm:text-[3.5rem] md:text-[4rem] leading-[1] font-medium tracking-wide">
                             Latest Blog & News
                         </span>
-                        <h2 className="text-heading-color font-semibold text-[3.2rem]">
+                        <h2 className="text-heading-color font-semibold text-[2.6rem] sm:text-[3rem] md:text-[3.2rem]">
                             Explore the <span className="text-secondary">Latest Travel News</span>
                         </h2>
                     </div>
-                    <div className="lg:w-[50%] w-[100%] flex justify-end">
+                    <div className="sm:w-[40%] lg:w-[50%] w-[100%] flex sm:justify-end justify-start">
                         <AppButton href="/news" >
                             View All News
                         </AppButton>
@@ -75,16 +75,9 @@ const LatestNews = () => {
 
                 </div>
 
-                <div className="grid grid-cols-1 xl:grid-cols-2 gap-[4rem] w-full">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-[2.5rem] sm:gap-[4rem] w-full">
                     {newsList.map((news, idx) => {
-                        let flexDirection;
-                        if (isMobile) {
-                            // Always use flex-col on small devices
-                            flexDirection = "flex-col";
-                        } else {
-                            // Alternate every two cards on desktop
-                            flexDirection = Math.floor(idx / 2) % 2 === 1 ? "flex-row-reverse" : "flex-row";
-                        }
+                        const desktopDirection = Math.floor(idx / 2) % 2 === 1 ? "xl:flex-row-reverse" : "xl:flex-row";
                         return (
                             <NewsCard
                                 key={idx}
@@ -94,7 +87,7 @@ const LatestNews = () => {
                                 link={news.link}
                                 userImg={news.userImg}
                                 userName={news.userName}
-                                flexDirection={flexDirection}
+                                flexDirection={desktopDirection}
                             />
                         );
                     })}
